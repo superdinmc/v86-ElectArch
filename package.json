@@ -1,0 +1,18 @@
+{
+  "name": "dapper-pail-make-t510z",
+  "productName": "dapper-pail-make-t510z",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "persnol",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "ws": "^8.12.1"
+  },
+  "devDependencies": {
+    "electron": "20.1.4"
+  }
+}
