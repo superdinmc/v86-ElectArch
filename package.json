@@ -10,7 +10,8 @@
     "start": "electron ."
   },
   "dependencies": {
-    "ws": "^8.12.1"
+    "ws": "^8.12.1",
+    "tuntap2": "0.9.0"
   },
   "devDependencies": {
     "electron": "20.1.4"
