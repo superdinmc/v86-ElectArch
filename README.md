@@ -5,7 +5,7 @@ Still WIP, But quited indev
 
 Basically this is my attempt making a better(i think) design of v86 website
 
-Feature :
+## Feature
  - Autosave(It works this time)
  - Nice dark terminal design
  - File exchanging
@@ -13,3 +13,6 @@ Feature :
  - Network access(WIP)
  - Starts very fast(Accept first start after computer restart)
  - Lightweight(This time not single file anymore, Can be reused easily)
+
+## How to
+Soon:tm:
