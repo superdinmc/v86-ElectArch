@@ -12,4 +12,4 @@ Feature :
  - Arch linux with latest tools
  - Network access(WIP)
  - Starts very fast(Accept first start after computer restart)
- - Light(This time not single file anymore, Can be reused easily)
+ - Lightweight(This time not single file anymore, Can be reused easily)
