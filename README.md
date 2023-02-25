@@ -34,11 +34,13 @@ Recommended :
 4. Create a new shortcut, configure it like below :
   - Target: `<mainFolder>\node_modules\electron\dist\electron.exe "<mainFolder>"`
   - Start in: `<mainFolder>`
+ - To run without shortcut, Run `npm start`
 5. Open it.
 
 #### File exchanging
 1. Hover your mouse at the bottom right corner, A panel should fade in.
 2. For getting files out from vm, enter the full path to the file.
+3. State reset button is also accessible from there
 
 ### Credit
 [Copy](https://github.com/copy) for [v86](https://github.com/copy/v86)
