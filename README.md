@@ -31,7 +31,9 @@ Recommended :
 1. Download as zip(Installer soon:tm:)
 2. Put it somewhere that you usually put programs
 3. Run `npm install`
-4. Copy the shortcut from the folder, Paste it on desktop(Optional)
+4. Create a new shortcut, configure it like below :
+  - Target: `<mainFolder>\node_modules\electron\dist\electron.exe "<mainFolder>"`
+  - Start in: `<mainFolder>`
 5. Open it.
 
 #### File exchanging
