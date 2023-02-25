@@ -1667,9 +1667,7 @@ function Va(a, b) {
 		//Access file system through serial and send to file explorer module
 		//setInterval(() => M.serial0_send("ls --recursive"), 10000);
 		ipcrend.on("serialIn", chr => emulator.serial0_send(chr));
-		M.add_listener("serial0-output-char", chr =>
-			ipcrend.send("serialOut", chr)
-		);
+		J(M, "serial0-output-char", chr => ipcrend.send("serialOut", chr));
 
 		J(M, "download-progress", function (G) {
 			var ja = c("loading");
