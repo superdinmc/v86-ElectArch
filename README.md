@@ -30,8 +30,9 @@ Recommended :
 #### Installing
 1. Download as zip(Installer soon:tm:)
 2. Put it somewhere that you usually put programs
-3. Copy the shortcut from the folder, Paste it on desktop(Optional)
-4. Open it.
+3. Run `npm install`
+4. Copy the shortcut from the folder, Paste it on desktop(Optional)
+5. Open it.
 
 #### File exchanging
 1. Hover your mouse at the bottom right corner, A panel should fade in.
