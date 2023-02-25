@@ -16,6 +16,17 @@ Basically this is my attempt making a better(i think) design of v86 website
 
 ## How to
 
+#### Hardware requirement
+Recommended :
+- i5 8th gen
+- 4GB of ram
+- (optional) Process lasso or ram managing software
+
+#### Resources usage
+- Around 20% - 50% CPU on busy, 0% on idle
+- 1 GB of ram
+- 30MB of storage
+
 #### Installing
 1. Download as zip(Installer soon:tm:)
 2. Put it somewhere that you usually put programs
