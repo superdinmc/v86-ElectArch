@@ -5,7 +5,10 @@
  * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
  * to expose Node.js functionality from the main process.
  */
-const { webFrame } = require("electron");
-const scale = webFrame.getZoomFactor();
-
-document.documentElement.style.setProperty("--scale", scale);
+const { ipcRenderer } = require("electron");
+var i = "";
+setInterval(async () => {
+	let save = await window.v86savemgr.pe();
+	ipcRenderer.send("getSaveMGR", Buffer.from(save));
+}, 2000);
+setTimeout(() => {}, 1000);

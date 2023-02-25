@@ -1,4 +1,5 @@
 "use strict";
+let ipcrend = require("electron").ipcRenderer;
 if (!window.location.toString().endsWith("archlinux")) {
 	window.location = window.location + "?profile=archlinux";
 }
@@ -916,14 +917,19 @@ function Va(a, b) {
 			var x = a();
 			m =
 				x.cdn ||
-				(l && false /*Treat it as website*/ ? "images/" : "https://k.copy.sh/");
+				(l && false /*Treat it as website*/ ? "./" : "https://k.copy.sh/");
 			m = [
 				{
 					id: "archlinux",
 					name: "Arch Linux",
 					H: 536870912,
 					ga: 8388608,
-					state: { url: m + "arch_state.bin.zst" },
+					state: {
+						url:
+							(require("fs").existsSync("./arch_state.bin.zst")
+								? "./"
+								: "https://k.copy.sh/") + "./arch_state.bin.zst",
+					},
 					filesystem: { Be: m + "arch/" },
 				},
 				{
@@ -1658,6 +1664,13 @@ function Va(a, b) {
 			g(q, M);
 			t && t(M);
 		});
+		//Access file system through serial and send to file explorer module
+		//setInterval(() => M.serial0_send("ls --recursive"), 10000);
+		ipcrend.on("serialIn", chr => emulator.serial0_send(chr));
+		M.add_listener("serial0-output-char", chr =>
+			ipcrend.send("serialOut", chr)
+		);
+
 		J(M, "download-progress", function (G) {
 			var ja = c("loading");
 			ja.style.display = "block";
@@ -1748,6 +1761,7 @@ function Va(a, b) {
 		}
 		c("boot_options").style.display = "none";
 		c("loading").style.display = "none";
+		c("verinfo").style.display = "none";
 		c("runtime_options").style.display = "block";
 		c("runtime_infos").style.display = "block";
 		c("screen_container").style.display = "block";
@@ -1937,6 +1951,8 @@ function Va(a, b) {
 				this.value = "0 packets";
 			};
 		};
+		//make this function accessible by public
+		window.v86savemgr = t;
 		c("save_state").onclick = async function () {
 			const z = await t.pe();
 			bb(z, "v86state.bin");
