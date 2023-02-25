@@ -11,4 +11,3 @@ setInterval(async () => {
 	let save = await window.v86savemgr.pe();
 	ipcRenderer.send("getSaveMGR", Buffer.from(save));
 }, 2000);
-setTimeout(() => {}, 1000);
