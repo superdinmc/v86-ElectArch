@@ -37,6 +37,10 @@ Recommended :
  - To run without shortcut, Run `npm start`
 5. Open it.
 
+#### Network support
+ - Network suport is WIP, not enabled by default because i cannot compile the dependency
+ - To install the network relay, Run `npm install tuntap2`
+ - To enable networking in the VM, Run `./networking.sh` in the VM
 #### File exchanging
 1. Hover your mouse at the bottom right corner, A panel should fade in.
 2. For getting files out from vm, enter the full path to the file.
