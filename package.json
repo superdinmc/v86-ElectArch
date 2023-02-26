@@ -1,11 +1,11 @@
 {
-  "name": "dapper-pail-make-t510z",
-  "productName": "dapper-pail-make-t510z",
-  "description": "My Electron application description",
+  "name": "electarch",
+  "productName": "ElectArch",
+  "description": "Arch linux emulator in pure javascript using v86 + nice design!",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
-  "author": "persnol",
+  "author": "5UP3R_D1N inc.",
   "scripts": {
     "start": "electron ."
   },

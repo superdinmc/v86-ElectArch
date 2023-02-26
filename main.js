@@ -76,6 +76,9 @@ ipcMain.on("restart", () => {
 	app.relaunch();
 	app.quit();
 });
+ipcMain.on("openDevTool", () =>
+	BrowserWindow.getAllWindows()[0].webContents.openDevTools()
+);
 setInterval(() => {
 	try {
 		require("fs").writeFileSync("./arch_state.bin.zst", services.savedata);
